@@ -38,5 +38,4 @@ aws-nginx-cloudwatch/
 │ └── nginx-browser.png
 │ └── cloudwatch-metrics.png
 ├── README.md
-
 ```
