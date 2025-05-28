@@ -39,3 +39,28 @@ aws-nginx-cloudwatch/
 │ └── cloudwatch-metrics.png
 ├── README.md
 ```
+
+## Monitoramento com CloudWatch
+
+1. Instalação CloudWatch Agent
+
+Para coletar métricas personalizadas da instância EC2, utilizei o CloudWatch Agent, configurado por meio do wizard interativo.
+
+A configuração foi salva em:
+
+/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.yaml
+
+Depois, iniciei o agente com o comando::
+
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a start -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.yaml -s
+
+Após isso, criei um dashboard no CloudWatch com os principais gráficos do tipo "medidor" para:
+
+CPU Utilization
+Network In
+Network Out
+
+Segue a imagem do dashboard:
+
+![Dashboard CloudWatch](images/cloudwatch-metrics.png)
+
