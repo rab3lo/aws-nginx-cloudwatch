@@ -22,7 +22,6 @@ O objetivo deste projeto é demonstrar conhecimentos práticos em provisionament
 5. Automatizar os passos acima com um script em Bash
 6. Validar o funcionamento do Nginx via navegador
 7. Verificar as métricas coletadas no CloudWatch
-8. Documentar e versionar o projeto no GitHub
 
 ## Como usar
 
