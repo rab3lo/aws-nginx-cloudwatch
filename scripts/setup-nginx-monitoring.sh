@@ -18,16 +18,12 @@ sudo yum install -y amazon-cloudwatch-agent
 # Cria o diretório de configuração
 sudo mkdir -p /opt/aws/amazon-cloudwatch-agent/etc/
 
-# Copia o arquivo de configuração
-sudo cp amazon-cloudwatch-agent.yaml /opt/aws/amazon-cloudwatch-agent/etc/
+# Copia o arquivo de configuração do CloudWatch Agent para a pasta
+sudo cp /home/ec2-user/aws-nginx-cloudwatch/scripts/amazon-cloudwatch-agent.yaml /opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.yaml
 
-# Inicia o CloudWatch Agent
+# Inicia o CloudWatch Agent com a configuração
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl \
--a start \
--m ec2 \
--c file:/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.yaml \
--s
-
-
-# Salve com permissão de execução
-chmod +x setup-nginx-monitoring.sh
+  -a start \
+  -m ec2 \
+  -c file:/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.yaml \
+  -s
