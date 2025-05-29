@@ -32,7 +32,8 @@ As instruções completas de uso, incluindo o script, serão adicionadas conform
 ```
 aws-nginx-cloudwatch/
 ├── scripts/
-│ └── setup-nginx-monitoring.sh
+│ ├── setup-nginx-monitoring.sh
+|  └── amazon-cloudwatch-agent.yaml  
 ├── images/
 │ └── ec2-instance.png
 │ └── nginx-browser.png
