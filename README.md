@@ -35,7 +35,6 @@ aws-nginx-cloudwatch/
 │ ├── setup-nginx-monitoring.sh
 |  └── amazon-cloudwatch-agent.yaml  
 ├── images/
-│ └── ec2-instance.png
 │ └── nginx-browser.png
 │ └── cloudwatch-metrics.png
 ├── README.md
