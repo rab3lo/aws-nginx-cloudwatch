@@ -25,7 +25,39 @@ O objetivo deste projeto é demonstrar conhecimentos práticos em provisionament
 
 ## Como usar
 
-As instruções completas de uso, incluindo o script, serão adicionadas conforme o desenvolvimento do projeto for avançando.
+Com sua instância EC2 (Amazon Linux 2) já criada e acessível, siga os passos abaixo:
+
+### 1. Acesse a instância via SSH
+
+bash
+ssh -i "sua-chave.pem" ec2-user@<IP-da-instância>
+
+### 2. Clone o repositório
+
+git clone https://github.com/rab3lo/aws-nginx-cloudwatch.git
+cd aws-nginx-cloudwatch/scripts
+
+### 3. Dê permissão de execução para o script setup-nginx-monitoring.sh
+
+chmod +x setup-nginx-monitoring.sh
+
+### 4. Execute o script de configuração
+
+./setup-nginx-monitoring.sh
+
+O script realiza automaticamente:
+
+Instalação e ativação do Nginx
+
+Instalação e configuração do CloudWatch Agent
+
+Início do monitoramento de uso de memória e disco
+
+### 5. Verificação
+
+Acesse o IP público da instância para verificar o Nginx em funcionamento
+
+No console da AWS, vá para CloudWatch > Métricas > e veja os dados sendo enviados
 
 ## Estrutura do projeto
 ```
